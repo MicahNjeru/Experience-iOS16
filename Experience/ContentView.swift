@@ -16,20 +16,38 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            Text("Count: \(movies.count)")
-                .navigationTitle("Movie")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            showingAddScreen.toggle()
-                        } label: {
-                            Label("Add Movie", systemImage: "plus")
+            List {
+                ForEach(movies) { movie in
+                    NavigationLink {
+                        Text(movie.title ?? "Unknown Title")
+                    } label: {
+                        HStack {
+                            EmojiRatingView(rating: movie.rating)
+                                .font(.largeTitle)
+                            
+                            VStack(alignment: .leading) {
+                                Text(movie.title ?? "Unknown Title")
+                                    .font(.headline)
+                                Text(movie.director ?? "Unknown Director")
+                                    .foregroundColor(.secondary)
+                            }
                         }
                     }
                 }
-                .sheet(isPresented: $showingAddScreen) {
-                    AddMovieView()
+            }
+            .navigationTitle("Movie")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showingAddScreen.toggle()
+                    } label: {
+                        Label("Add Movie", systemImage: "plus")
+                    }
                 }
+            }
+            .sheet(isPresented: $showingAddScreen) {
+                AddMovieView()
+            }
         }
     }
 }
