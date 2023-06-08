@@ -10,7 +10,10 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var movies: FetchedResults<Movie>
+    @FetchRequest(sortDescriptors: [
+        SortDescriptor(\.title),
+        SortDescriptor(\.director)
+    ]) var movies: FetchedResults<Movie>
     
     @State private var showingAddScreen = false
     
@@ -34,9 +37,14 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onDelete(perform: deleteMovie)
             }
             .navigationTitle("Movie")
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         showingAddScreen.toggle()
@@ -49,6 +57,14 @@ struct ContentView: View {
                 AddMovieView()
             }
         }
+    }
+    
+    func deleteMovie(at offsets: IndexSet) {
+        for offset in offsets {
+            let movie = movies[offset]
+            moc.delete(movie)
+        }
+        try? moc.save()
     }
 }
 

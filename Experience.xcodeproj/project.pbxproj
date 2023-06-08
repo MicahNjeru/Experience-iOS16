@@ -67,13 +67,13 @@
 			children = (
 				75A154C72A2FA167000C3FB8 /* ExperienceApp.swift */,
 				75A154C92A2FA167000C3FB8 /* ContentView.swift */,
+				75824F942A3064CB007B22CA /* DetailView.swift */,
 				75824F922A305F5E007B22CA /* EmojiRatingView.swift */,
 				75C872A72A304B2100803135 /* DataController.swift */,
-				75C872A42A304ABD00803135 /* Experience.xcdatamodeld */,
 				75824F8E2A3052EC007B22CA /* AddMovieView.swift */,
 				75824F902A305BBA007B22CA /* RatingView.swift */,
 				75A154CB2A2FA168000C3FB8 /* Assets.xcassets */,
-				75824F942A3064CB007B22CA /* DetailView.swift */,
+				75C872A42A304ABD00803135 /* Experience.xcdatamodeld */,
 				75A154CD2A2FA168000C3FB8 /* Preview Content */,
 			);
 			path = Experience;

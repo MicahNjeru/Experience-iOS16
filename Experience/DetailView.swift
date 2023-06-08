@@ -10,6 +10,10 @@ import SwiftUI
 struct DetailView: View {
     
     let movie: Movie
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.dismiss) var dismiss
+    
+    @State private var showingDeleteAlert = false
     
     var body: some View {
         ScrollView {
@@ -40,5 +44,25 @@ struct DetailView: View {
         }
         .navigationTitle(movie.title ?? "Unknown Movie")
         .navigationBarTitleDisplayMode(.inline)
+        .alert("Delete Movie", isPresented: $showingDeleteAlert) {
+            Button("Delete", role: .destructive, action: deleteMovie)
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("Are you sure?")
+        }
+        .toolbar {
+            Button {
+                showingDeleteAlert = true
+            } label: {
+                Label("Delete this movie", systemImage: "trash")
+            }
+        }
+    }
+    
+    func deleteMovie() {
+        moc.delete(movie)
+        
+        try? moc.save()
+        dismiss()
     }
 }
