@@ -1,8 +1,9 @@
 #  Experience iOS 16
 ## About the app
-- This is an app that accepts users input from forms 
-- Users can add movie titles, directors, ratings and reviews of the movie
-- The app also saves the user's input data using the Core Data framework
+* This is an app that accepts users input from forms 
+* Users can add movie titles, directors, ratings and reviews of the movie
+* The app also saves the user's input data using the Core Data framework
+
 
 ## What I've Learnt
 1. Core Data is a really powerful framework that does so much than just save data
