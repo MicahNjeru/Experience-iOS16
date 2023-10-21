@@ -35,6 +35,8 @@
 		75EBF57C2AE41E7D00B631B7 /* DarkModeScene3.png in Resources */ = {isa = PBXBuildFile; fileRef = 75EBF56A2AE41E7D00B631B7 /* DarkModeScene3.png */; };
 		75EBF57D2AE41E7D00B631B7 /* LigthModeScene2.png in Resources */ = {isa = PBXBuildFile; fileRef = 75EBF56B2AE41E7D00B631B7 /* LigthModeScene2.png */; };
 		75EBF57E2AE41E7D00B631B7 /* LigthModeScene8.png in Resources */ = {isa = PBXBuildFile; fileRef = 75EBF56C2AE41E7D00B631B7 /* LigthModeScene8.png */; };
+		75EBF5812AE4208400B631B7 /* DarkModeGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 75EBF57F2AE4208400B631B7 /* DarkModeGif.gif */; };
+		75EBF5822AE4208400B631B7 /* LightMode.gif in Resources */ = {isa = PBXBuildFile; fileRef = 75EBF5802AE4208400B631B7 /* LightMode.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		75EBF56A2AE41E7D00B631B7 /* DarkModeScene3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkModeScene3.png; sourceTree = "<group>"; };
 		75EBF56B2AE41E7D00B631B7 /* LigthModeScene2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LigthModeScene2.png; sourceTree = "<group>"; };
 		75EBF56C2AE41E7D00B631B7 /* LigthModeScene8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LigthModeScene8.png; sourceTree = "<group>"; };
+		75EBF57F2AE4208400B631B7 /* DarkModeGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = DarkModeGif.gif; sourceTree = "<group>"; };
+		75EBF5802AE4208400B631B7 /* LightMode.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = LightMode.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 		75EBF55A2AE41E6B00B631B7 /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
+				75EBF57F2AE4208400B631B7 /* DarkModeGif.gif */,
+				75EBF5802AE4208400B631B7 /* LightMode.gif */,
 			);
 			path = Gifs;
 			sourceTree = "<group>";
@@ -224,10 +230,12 @@
 				75EBF57A2AE41E7D00B631B7 /* DarkModeScene9.png in Resources */,
 				75EBF5782AE41E7D00B631B7 /* LigthModeScene7.png in Resources */,
 				75A154CF2A2FA168000C3FB8 /* Preview Assets.xcassets in Resources */,
+				75EBF5812AE4208400B631B7 /* DarkModeGif.gif in Resources */,
 				75EBF57C2AE41E7D00B631B7 /* DarkModeScene3.png in Resources */,
 				75EBF5722AE41E7D00B631B7 /* DarkModeScene7.png in Resources */,
 				75EBF5732AE41E7D00B631B7 /* DarkModeScene8.png in Resources */,
 				75EBF5712AE41E7D00B631B7 /* DarkModeScene4.png in Resources */,
+				75EBF5822AE4208400B631B7 /* LightMode.gif in Resources */,
 				75A154CC2A2FA168000C3FB8 /* Assets.xcassets in Resources */,
 				75EBF5772AE41E7D00B631B7 /* LigthModeScene6.png in Resources */,
 				75EBF56D2AE41E7D00B631B7 /* DarkModeScene2.png in Resources */,
